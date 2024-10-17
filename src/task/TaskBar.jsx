@@ -11,7 +11,7 @@ export default function TaskBar() {
       "React is used to build single-page applications. React allows us to create reusable UI components.",
     tags: ["Web", "React", "JS"],
     priority: "High",
-    isFavourite: false,
+    isFavourite: true,
   };
   const [tasks, setTasks] = useState([defaultTask]);
   return (
