@@ -39,10 +39,19 @@ export default function TaskBar() {
     setShowAddModal(true);
   }
 
+  function handleCloseModal() {
+    setShowAddModal(false);
+    setTaskToUpdate(null);
+  }
+
   return (
     <section className="mb-20" id="tasks">
       {showAddModal && (
-        <AddTaskModal onSave={handleAddEditTask} taskToUpdate={taskToUpdate} />
+        <AddTaskModal
+          onSave={handleAddEditTask}
+          taskToUpdate={taskToUpdate}
+          onClose={handleCloseModal}
+        />
       )}
       <div className="container">
         <div className="p-2 flex justify-end">
