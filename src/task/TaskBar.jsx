@@ -17,12 +17,14 @@ export default function TaskBar() {
   const [tasks, setTasks] = useState([defaultTask]);
   const [showAddModal, setShowAddModal] = useState(false);
 
-  function handleAddTask() {
-    console.log("Adding a new task");
+  function handleAddTask(newTask) {
+    console.log("Adding a new task", newTask);
+    setTasks([...tasks, newTask]);
+    setShowAddModal(false);
   }
   return (
     <section className="mb-20" id="tasks">
-      {showAddModal && <AddTaskModal />}
+      {showAddModal && <AddTaskModal onSave={handleAddTask} />}
       <div className="container">
         <div className="p-2 flex justify-end">
           <SearchTask />
