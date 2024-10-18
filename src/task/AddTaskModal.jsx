@@ -88,8 +88,8 @@ export default function AddTaskModal({ onSave, taskToUpdate, onClose }) {
         </div>
         <div className="mt-16 flex justify-between lg:mt-20">
           <button
-            onClick={onClose}
             className="rounded bg-red-600 px-4 py-2 text-white transition-all hover:opacity-80"
+            onClick={onClose}
           >
             Close
           </button>

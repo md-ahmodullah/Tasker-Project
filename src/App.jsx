@@ -1,7 +1,7 @@
 import Footer from "./Footer";
 import Header from "./Header";
 import HeroSection from "./HeroSection";
-import TaskBar from "./task/TaskBar";
+import TaskBoard from "./task/TaskBoard";
 
 export default function App() {
   return (
@@ -9,7 +9,7 @@ export default function App() {
       <Header />
       <div className="flex flex-col justify-center items-center">
         <HeroSection />
-        <TaskBar />
+        <TaskBoard />
       </div>
       <Footer />
     </>
